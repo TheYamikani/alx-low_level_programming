@@ -1,19 +1,20 @@
-#include "notrebloh.h"
-#include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
+#include "main.h"
 
 /**
- * *malloc_checked - allocate memory with malloc
- * @b: unsigned int type
- * Return: return pointer
+ * malloc_checked - A function that allocates memory using malloc.
+ * @b: An unsigned input integer
+ * Return: pointer to the allocated memory or NULL
  */
+
 void *malloc_checked(unsigned int b)
 {
-	int *ptr;
+	void *s;
 
-	ptr = malloc(b);
-	if (ptr == NULL)
+	s = malloc(b);
+
+	if (s == NULL)
 		exit(98);
-	return (ptr);
+
+	return (s);
 }
